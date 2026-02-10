@@ -16,12 +16,17 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
       sourcemap: false,
-      // اطمینان از اینکه همه ماژول‌ها در بسته نهایی قرار می‌گیرند
       rollupOptions: {
         output: {
-          manualChunks: undefined
+          // جدا کردن کتابخانه‌ها در یک فایل مجزا برای لود سریع‌تر و اطمینان از بسته‌بندی کامل
+          manualChunks: {
+            'vendor': ['react', 'react-dom', 'recharts', 'lucide-react', 'xlsx'],
+          }
         }
-      }
+      },
+      // جلوگیری از خرد شدن بیش از حد فایل‌ها
+      cssCodeSplit: false,
+      chunkSizeWarningLimit: 1000,
     },
     server: {
       port: 3000
