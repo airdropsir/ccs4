@@ -1,0 +1,5 @@
+{
+  "name": "CCS Quality Control System",
+  "description": "A comprehensive dashboard for monitoring factory quality metrics (CCS & FeO), calculating financial impacts based on configurable rules, and providing AI-driven analysis.",
+  "requestFramePermissions": []
+}
