@@ -4,26 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>سیستم جامع کنترل کیفی CCS</title>
-    <!-- Tailwind CDN - در نسخه نهایی بهتر است به صورت محلی نصب شود اما فعلا برای اجرا باقی می‌ماند -->
+    <!-- Tailwind CDN - این اسکریپت معمولا در ایران باز است، اما برای احتیاط استایل‌های پایه اضافه شده است -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* استایل فونت جایگزین در صورت عدم دسترسی به گوگل فونت */
-      @font-face {
-        font-family: 'Vazirmatn';
-        src: local('Tahoma');
-      }
+      /* استفاده از فونت سیستم برای اطمینان از خوانایی بدون نیاز به گوگل فونت */
       body {
-        font-family: 'Vazirmatn', Tahoma, sans-serif;
+        font-family: Tahoma, 'Segoe UI', Arial, sans-serif;
         background-color: #f8fafc;
         margin: 0;
         padding: 0;
       }
       #root:empty::after {
-        content: 'در حال بارگذاری هسته سیستم... لطفاً شکیبا باشید';
-        display: flex; justify-content: center; align-items: center;
-        height: 100vh; font-weight: bold; color: #64748b; font-size: 1.1rem;
-        text-align: center;
+        content: 'در حال آماده‌سازی هسته سیستم... لطفاً کمی صبر کنید';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-weight: bold;
+        color: #64748b;
+        font-size: 1.1rem;
         direction: rtl;
+        text-align: center;
       }
     </style>
 <script type="importmap">
@@ -46,6 +47,7 @@
 </head>
 <body>
     <div id="root"></div>
+    <!-- Vite تمام کتابخانه‌ها را از package.json خوانده و در فایل نهایی در پوشه assets قرار می‌دهد -->
     <script type="module" src="/index.tsx"></script>
 </body>
 </html>
